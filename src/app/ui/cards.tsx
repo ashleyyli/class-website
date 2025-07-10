@@ -70,10 +70,11 @@ export function ActivitiesCard({
     votes: number,
 }) {
     // handle vote goes... here?
-    function handleVote() {
-        // async?
-        console.log('vote');
-    }
+    // function handleVote() {
+    //     // async?
+    //     console.log('vote');
+    // }
+    
     return (
         <Card title={title} description={description}>
             <div className="flex flex-row justify-between items-center">
@@ -81,7 +82,7 @@ export function ActivitiesCard({
                     {votes} votes
                 </p>
                 <SecondaryButton>
-                    <button className="rounded bg-gray-50 px-3 py-1" onClick={handleVote}>
+                    <button className="rounded bg-gray-50 px-3 py-1">
                         Vote
                     </button>
                 </SecondaryButton>
