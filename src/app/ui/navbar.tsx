@@ -1,7 +1,7 @@
 'use client'; // maybe move nav links into separate component to reduce client side components
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+// import { usePathname } from 'next/navigation';
 // import clsx from 'clsx';
 import { DisplayToggle } from './buttons';
 
@@ -32,9 +32,9 @@ export default function SideNav() {
       {/*  dark:bg-slate-950/20 */}
       <header className="p-4 bg-cyan-100">
         <nav className="flex flex-col md:flex-row items-center">
-          <a className="text-3xl min-w-fit pl-6 pr-14 align-text-bottom" href="/" title="className">
+          <Link className="text-3xl min-w-fit pl-6 pr-14 align-text-bottom" href="/" title="className">
             {className}
-          </a>
+          </Link>
           <div className="flex flex-row items-center w-full justify-between">
             <div className="text-2xl flex items-center space-x-4 align-text-bottom">   
               {links.map((link) => {

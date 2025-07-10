@@ -1,9 +1,9 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { ScheduleCard } from "./ui/cards";
 
 export default function Home() {
   const date = new Date();
-  const endDate = new Date();
+  // const endDate = new Date();
 
   return (
     <main className="flex flex-grow flex-col p-6 w-full max-w-[800px] space-y-6">
@@ -28,8 +28,8 @@ export default function Home() {
             <p className="flex flex-grow">Class Activity</p>
             <p>Location</p>
           </div>
-          <ScheduleCard title="title" description="description" date={date} location="SIEBEL 2405"/>
-          <ScheduleCard title="title" description="description" date={date} location=""/>
+          <ScheduleCard title="title" date={date} location="SIEBEL 2405"/>
+          <ScheduleCard title="title" date={date} location=""/>
         </div>
         <div className="text-2xl pb-4">
           Reminders

@@ -81,7 +81,7 @@ export function ActivitiesCard({
                     {votes} votes
                 </p>
                 <SecondaryButton>
-                    <button className="rounded bg-gray-50 px-3 py-1">
+                    <button className="rounded bg-gray-50 px-3 py-1" onClick={handleVote}>
                         Vote
                     </button>
                 </SecondaryButton>
@@ -118,13 +118,13 @@ export function ScheduleCard({
     title,
     date,
     // sameDay,
-    description, 
+    // description, 
     location,
 }: {
     title: string,
     date: Date,
     // sameDay: boolean,
-    description: string,
+    // description: string,
     location: string,
 }) {
     // link to slides/pdf download

@@ -4,9 +4,9 @@ import { PrimaryButton } from "../ui/buttons";
 
 
 export default function Activities() {
-    function handleClick() {
+    // function handleClick() {
         
-    }
+    // }
 
     return (
         <main className="flex flex-grow flex-col p-6 w-full max-w-[800px] space-y-6">

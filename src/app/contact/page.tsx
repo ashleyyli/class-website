@@ -8,7 +8,7 @@ export default function Contact() {
             <p className="text-xl">Contact us here</p>
             <ul className="list-disc pl-8 text-xl">
                 <li>email, mailto</li>
-                <li>don't know what else</li>
+                <li>dont know what else</li>
                 <li>test</li>
             </ul>
         </main>
