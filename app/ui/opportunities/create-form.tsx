@@ -1,11 +1,8 @@
 'use client';
 
-// import { ActivityState } from '@/app/lib/actions';
-// import { useActionState } from 'react';
 import { createOpportunity } from '../../lib/actions';
 import { PrimaryButton, SecondaryButton } from '../buttons';
 import Link from 'next/link';
-import { auth, signIn } from '@/auth'
 import { redirect } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 

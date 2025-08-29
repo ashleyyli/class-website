@@ -2,13 +2,11 @@
 
 import { SecondaryButton } from './buttons';
 import { handleVote, handleSignUp } from '../lib/actions';
-import Link from 'next/link';
 import { getDate } from '../lib/utils';
 import { HiOutlinePencil } from "react-icons/hi";
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { StatusButton } from './buttons';
-import { getVotes } from '../lib/data';
 import { Status } from '../lib/definitions';
 
 

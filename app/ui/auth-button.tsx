@@ -1,7 +1,4 @@
-// import { SignIn } from '../lib/auth-action'
 import { signIn, signOut, auth } from '../../auth';
-import { useSession } from "next-auth/react";
-// import { signIn, signOut, useSession } from "next-auth/react";
 
 export async function AuthButton() {
   const session = await auth()

@@ -1,12 +1,9 @@
-// import { ActivityState } from '@/app/lib/actions';
-// import { useActionState } from 'react';
 import { editActivity } from '../../lib/actions';
 import { PrimaryButton, SecondaryButton } from '../buttons';
 import Link from 'next/link';
 import { FetchActivitybyId } from '@/app/lib/data';
-import { Activity } from '@/app/lib/definitions';
 import { formatDate } from '@/app/lib/utils';
-import { auth, signIn } from '@/auth'
+import { auth } from '@/auth'
 import { redirect } from 'next/navigation';
 
 export async function EditActivityForm({

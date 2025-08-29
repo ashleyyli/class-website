@@ -1,7 +1,4 @@
-import ModalBody from "../../ui/modal/modal-body";
-import ModalBackground from "../../ui/modal/modal-background";
 import { FetchOpportunitybyId } from "../../lib/data";
-import { getDate } from "../../lib/utils";
 import { Opportunity } from "../../lib/definitions";
 import { OpportunityContent } from "../../ui/content";
 

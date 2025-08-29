@@ -1,9 +1,6 @@
-// import { ActivityState } from '@/app/lib/actions';
-// import { useActionState } from 'react';
-import { createOpportunity } from '../../lib/actions';
 import { PrimaryButton, SecondaryButton } from '../buttons';
 import Link from 'next/link';
-import { auth, signIn } from '@/auth'
+import { auth } from '@/auth'
 import { redirect } from 'next/navigation';
 import { FetchOpportunitybyId } from '@/app/lib/data';
 import { editOpportunity } from '../../lib/actions';

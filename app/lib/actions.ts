@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import supabase from "./supabaseClient";
 import { signIn } from '../../auth';
 import { AuthError } from 'next-auth';
-import { id } from 'zod/locales';
+// import { id } from 'zod/locales';
 import { auth } from '@/auth'
 
 

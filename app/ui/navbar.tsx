@@ -1,7 +1,6 @@
 import Link from 'next/link';
 // import { usePathname } from 'next/navigation';
 // import clsx from 'clsx';
-import { DisplayToggle } from './buttons';
 import { AuthButton } from './auth-button';
 
 const className = "Class Name";

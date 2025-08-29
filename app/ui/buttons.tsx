@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { HiOutlineSun, HiOutlineMoon, HiCheckCircle, HiOutlineTrash, HiX } from "react-icons/hi";
+import { HiOutlineSun, HiOutlineMoon, HiX } from "react-icons/hi";
 
 import { useState } from 'react';
 import type { ButtonHTMLAttributes } from 'react';

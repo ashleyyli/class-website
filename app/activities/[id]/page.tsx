@@ -1,7 +1,4 @@
-import ModalBody from "../../ui/modal/modal-body";
-import ModalBackground from "../../ui/modal/modal-background";
 import { FetchActivitybyId } from "../../lib/data";
-import { getDate } from "../../lib/utils";
 import { Activity } from "../../lib/definitions";
 import { ActivityContent } from "../../ui/content";
 
