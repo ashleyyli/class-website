@@ -3,9 +3,9 @@ import { EditOpportunityForm } from "@/app/ui/opportunities/edit-form"
 /**
  * Shown on /activities/new on fresh page load (refresh, open in new tab, etc.)
  */
-export default async function ParallelRoutePage({ params } : { params : { id: number }}) {
+export default async function ParallelRoutePage(props: { params: { id: string } }) {
   console.log("EDIT INTERCEPTED")
-  const { id } = await params;
+  const id = Number(props.params.id);
 
 
   // not properly centered and looks very barren but whatever

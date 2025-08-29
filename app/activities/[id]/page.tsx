@@ -5,10 +5,9 @@ import { ActivityContent } from "../../ui/content";
 /**
  * Shows when the /new route is intercepted
  */
-export default async function ActivityModal(props: { params: Promise<{ id: number }> }) {
+export default async function ActivityModal(props: { params: { id: string } }) {
   console.log("I am the modal that is shown during interception");
-  const params = await props.params;
-  const id = params.id;
+  const id = Number(props.params.id);
   const activity: Activity | null = await FetchActivitybyId(id);
 
   if (!activity) {
