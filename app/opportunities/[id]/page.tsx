@@ -5,10 +5,10 @@ import { OpportunityContent } from "../../ui/content";
 /**
  * Shows when the /new route is intercepted
  */
-export default async function OpportunityModal(props: { params: { id: string } }) {
+export default async function OpportunityModal({params}: {params: Promise<{ id: string }>}) {
   console.log("ID INTERCEPTED");
-  const id = Number(props.params.id);
-  const opportunity: Opportunity | null = await FetchOpportunitybyId(id);
+  const { id } = await params;
+  const opportunity: Opportunity | null = await FetchOpportunitybyId(Number(id));
 
   if (!opportunity) {
     return (

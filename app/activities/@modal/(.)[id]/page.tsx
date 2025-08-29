@@ -7,11 +7,10 @@ import { ActivityContent } from "../../../ui/content";
 /**
  * Shows when the /new route is intercepted
  */
-export default async function ActivityModal(props: { params: Promise<{ id: number }> }) {
+export default async function ActivityModal({params}: {params: Promise<{ id: string }>}) {
   console.log("I am the modal that is shown during wewgfsdfg");
-  const params = await props.params;
-  const id = params.id;
-  const activity: Activity | null = await FetchActivitybyId(id);
+  const { id } = await params;
+  const activity: Activity | null = await FetchActivitybyId(Number(id));
 
   if (!activity) {
     return (
