@@ -5,18 +5,18 @@ export default function Contact() {
       <h1 className="pb-4 text-3xl font-bold">Contact Us</h1>
 
       <p>
-        Here's an example contact page!  This can be a place for students to provide feedback on the website or class, or find help.
+        Here&apos;s an example contact page!  This can be a place for students to provide feedback on the website or class, or find help.
       </p>
 
       <section className="space-y-4 pb-4">
         <h2 className="text-2xl font-semibold">Questions?</h2>
         <p className="text-lg">
           Need help navigating the site or have questions about how something
-          works? Reach out and we’ll get back to you as soon as possible:
+          works? Reach out and we&apos;ll get back to you as soon as possible:
         </p>
         <ul className="list-disc pl-6 space-y-2 text-lg">
           <li>
-            📧 <a href="mailto:support@example.com" className="text-blue-600 hover:underline">support@example.com</a> – direct support for troubleshooting and account issues
+            📧 <a href="mailto:support@example.com" className="text-blue-600 hover:underline">support@example.com</a> - direct support for troubleshooting and account issues
           </li>
           <li>📞 Phone support: 123-456-7890</li>
         </ul>
@@ -30,7 +30,7 @@ export default function Contact() {
         </p>
         <ul className="list-disc pl-6 space-y-2 text-lg">
           <li>
-            📧 <a href="mailto:yourteam@example.com" className="text-blue-600 hover:underline">yourteam@example.com</a> – for general feedback and bug reports
+            📧 <a href="mailto:yourteam@example.com" className="text-blue-600 hover:underline">yourteam@example.com</a> - for general feedback and bug reports
           </li>
           <li>
             🐛 If reporting a bug, please include details such as your browser, device, and steps to reproduce the issue

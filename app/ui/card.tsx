@@ -201,12 +201,12 @@ export function ScheduleCard({
     title,
     date,
     location,
-    content,
+    // content,
 }: {
     title: string,
     date: Date,
     location: string,
-    content?: string,
+    // content?: string,
 }) {
     // link to slides/pdf download
     return (

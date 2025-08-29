@@ -7,7 +7,7 @@ interface ModalWindowProps {
 
 // keeping route for background click close modal
 
-const ModalBackground: FC<ModalWindowProps> = ({ children, route }) => {
+const ModalBackground: FC<ModalWindowProps> = ({ children }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center mx-auto pointer-events-none">
       <div className="fixed inset-0 bg-gray-200/50" />

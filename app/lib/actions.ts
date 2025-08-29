@@ -89,7 +89,7 @@ const CreateActivity = ActivityFormSchema.omit({ id: true, status: true, votes: 
 const EditActivity = ActivityFormSchema.omit({ status: true, votes: true, created_at: true, });
 
 const CreateOpportunity = OpportunityFormSchema.omit({ id: true, status: true, created_at: true, author: true, });
-const EditOpportunity = OpportunityFormSchema.omit({ status: true, signups: true, created_at: true, });
+const EditOpportunity = OpportunityFormSchema.omit({ status: true, created_at: true, });
 
 export async function createActivity(formData: FormData) {
     const session = await auth();

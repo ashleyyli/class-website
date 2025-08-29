@@ -93,7 +93,7 @@ export async function ScheduleCardsWrapper() {
                                 title={schedule.title}
                                 date={schedule.date}
                                 location={schedule.location}
-                                content={schedule.description}
+                                // content={schedule.description}
                             />
                         );
                     })
