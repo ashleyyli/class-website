@@ -36,3 +36,4 @@ Please pretend everything is perfect and this does not exist thank you :-)
 - [ ] Some components are client and/or async and do not need to be
 - [ ] Fix the mangled imports
 - [ ] Some components are not precisely named
+- [ ] Refactor code into mode components?  Code readability could be improved
