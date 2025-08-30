@@ -3,7 +3,6 @@ import { PrimaryButton } from "../ui/buttons";
 import { OpportunitiesCardsWrapper } from "../ui/cards";
 
 export default function Opportunities() {
-    console.log("I am the opportunities page");
     return (
         <main className="flex flex-grow flex-col p-6 w-full max-w-[800px] space-y-6">
             <div className="flex flex-row justify-between items-center">

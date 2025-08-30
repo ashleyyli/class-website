@@ -8,7 +8,6 @@ import { OpportunityContent } from "../../../../ui/content";
  * Shows when the /new route is intercepted
  */
 export default async function OpportunityModal({params}: {params: Promise<{ id: string }>}) {
-  console.log("EDIT PARALLEL");
   const { id } = await params;
   const opportunity: Opportunity | null = await FetchOpportunitybyId(Number(id));
 

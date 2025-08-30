@@ -6,7 +6,6 @@ import { CreateActivityForm } from "../../../ui/activities/create-form";
  * Shows when the /new route is intercepted
  */
 export default function InterceptedPage() {
-  console.log("I am the modal that is shown during interception")
   return (
     <ModalBackground>
       <ModalBody title="Make a class activity suggestion">    

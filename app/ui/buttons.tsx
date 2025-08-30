@@ -43,7 +43,6 @@ export function DisplayToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-    //   text-yellow-500 dark:text-gray-200
       className="p-2 rounded "
     >
       {darkMode ? (
@@ -106,13 +105,11 @@ export function CloseModalButton({ route } : { route? : string })  {
   }
 
   return (
-    <button onClick={handleClose}>
+    <button className="cursor-pointer" onClick={handleClose}>
       <HiX />
     </button>
   );
 }
-
-// type Status = "pending" | "approved" | "denied" | "archived" | "planned";
 
 const statusColors: Record<Status, string> = {
   Pending: "bg-yellow-50 text-gray-800",

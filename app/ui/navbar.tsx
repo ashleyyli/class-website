@@ -27,7 +27,6 @@ const links = [
 export default function SideNav() {
   return (
     <div className="flex h-full flex-col">
-      {/*  dark:bg-slate-950/20 */}
       <header className="p-3 border-b-1 border-b-gray-100 bg-blue-950 text-white">
         <nav className="flex flex-col md:flex-row items-center">
           <Link className="text-3xl min-w-fit pl-6 pr-14 align-text-bottom font-bold" href="/" title="className">

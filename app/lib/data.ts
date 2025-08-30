@@ -11,8 +11,6 @@ export async function FetchActivitybyId(id: number) {
     console.error("Error fetching activity by ID:", error);
   }
 
-  console.log("activity fetched");
-
   return data;
 }
 
@@ -25,8 +23,6 @@ export async function fetchActivities() {
   if (error) {
     throw new Error(error.message);
   }
-
-  console.log("activities fetched");
 
   return data;
 }
@@ -56,8 +52,6 @@ export async function FetchOpportunitybyId(id: number) {
     console.error("Error fetching opportunity by ID:", error);
   }
 
-  console.log("opportunity fetched");
-
   return data;
 }
 
@@ -70,8 +64,6 @@ export async function fetchOpportunities() {
   if (error) {
     throw new Error(error.message);
   }
-
-  console.log("opportunities fetched");
 
   return data;
 }
@@ -99,8 +91,6 @@ export async function fetchSchedules() {
   if (error) {
     throw new Error(error.message);
   }
-
-  console.log("schedules fetched");
 
   return data;
 }

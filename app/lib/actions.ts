@@ -105,7 +105,7 @@ export async function createActivity(formData: FormData) {
     });
 
     if (!validatedFields.success) {
-        console.log(validatedFields.error.flatten().fieldErrors);
+        console.error(validatedFields.error.flatten().fieldErrors);
         return;  // horrible
         // return {
         //     errors: validatedFields.error.flatten().fieldErrors,
@@ -125,7 +125,7 @@ export async function createActivity(formData: FormData) {
         });
 
     if (error) {
-        console.log(error);
+        console.error(error);
         return;
     //     return {
     //         message: 'Database error. Failed to create activity.',
@@ -153,7 +153,7 @@ export async function createOpportunity(formData: FormData) {
     });     
 
     if (!validatedFields.success) {
-        console.log(validatedFields.error.flatten().fieldErrors);
+        console.error(validatedFields.error.flatten().fieldErrors);
         return;  // horrible
         // return {
         //     errors: validatedFields.error.flatten().fieldErrors,
@@ -176,7 +176,7 @@ export async function createOpportunity(formData: FormData) {
         }); 
 
     if (error) {
-        console.log(error);
+        console.error(error);
         return;
         // return {
         //     message: 'Database error. Failed to create opportunity.',
@@ -197,11 +197,10 @@ export async function editActivity(formData: FormData) {
     });
 
     if (!validatedFields.success) {
-        console.log(validatedFields.error.flatten().fieldErrors);
+        console.error(validatedFields.error.flatten().fieldErrors);
         return;  // horrible
     }
 
-    console.log(validatedFields.data);
     const { id, title, date, description, author } = validatedFields.data;
 
     const session = await auth();
@@ -216,7 +215,7 @@ export async function editActivity(formData: FormData) {
         .eq('id', id);
 
     if (error) {
-        console.log(error);
+        console.error(error);
         return;
     }
 
@@ -235,7 +234,7 @@ export async function editOpportunity(formData: FormData) {
     });
 
     if (!validatedFields.success) {
-        console.log(validatedFields.error.flatten().fieldErrors);
+        console.error(validatedFields.error.flatten().fieldErrors);
         return;  // horrible
     }
 
@@ -260,7 +259,7 @@ export async function editOpportunity(formData: FormData) {
         .eq('id', id);
 
     if (error) {
-        console.log(error);
+        console.error(error);
         return;
     }
 
@@ -275,7 +274,7 @@ export async function deleteActivity(id: number) {
         .eq('id', id);
 
     if (error) {
-        console.log(error);
+        console.error(error);
         return;
     }
 }
@@ -287,11 +286,9 @@ export async function updateActivityStatus(id: number, status: string) {
         .eq('id', id);
     
     if (error) {
-        console.log(error);
+        console.error(error);
         return;
     }
-
-    console.log("updated status", status)
 
     revalidatePath('/activities');   
 }
@@ -303,22 +300,18 @@ export async function updateOpportunityStatus(id: number, status: string) {
         .eq('id', id);
     
     if (error) {
-        console.log(error);
+        console.error(error);
         return;
     }
-
-    console.log("updated status", status)
 
     revalidatePath('/opportunities');   
 }
 
 export async function handleVote(id: number, votes: number) {
-    console.log("voting");
-
     const session = await auth();
 
     if (!session) {
-        console.log("not signed in");
+        console.error("not signed in");
         return;
     }
     // check if user has already voted
@@ -330,13 +323,13 @@ export async function handleVote(id: number, votes: number) {
 
     if (selectError) {
         // fetch error
-        console.log(selectError);
+        console.error(selectError);
         return;
     }
 
     if (existingVotes && existingVotes.length > 0) {
       // already voted
-      console.log("already voted");
+      console.error("already voted");
       return;
     }
     const { error: insertError } = await supabase
@@ -347,7 +340,7 @@ export async function handleVote(id: number, votes: number) {
         });
 
     if (insertError) {
-        console.log(insertError);
+        console.error(insertError);
         return;
     }   
     
@@ -357,22 +350,18 @@ export async function handleVote(id: number, votes: number) {
         .eq('id', id);
     
     if (updateError) {
-        console.log(updateError);
+        console.error(updateError);
         return;
     }
 
     revalidatePath('/activities');
-
-    console.log('voted for ' + id);
 }
 
 export async function handleSignUp(id: number) {
-    console.log("signing up");
-
     const session = await auth();
 
     if (!session) {
-        console.log("not signed in");
+        console.error("not signed in");
         return;
     }
     // check if user has already signed up
@@ -384,13 +373,13 @@ export async function handleSignUp(id: number) {
 
     if (selectError) {
         // fetch error
-        console.log(selectError);
+        console.error(selectError);
         return;
     }
 
     if (existingSignups && existingSignups.length > 0) {
       // already voted
-      console.log("already signed up");
+      console.error("already signed up");
       return;
     }
     const { error: insertError } = await supabase
@@ -401,7 +390,7 @@ export async function handleSignUp(id: number) {
         });
 
     if (insertError) {
-        console.log(insertError);
+        console.error(insertError);
         return;
     }   
     
@@ -411,13 +400,13 @@ export async function handleSignUp(id: number) {
     //     .eq('id', id);
     
     // if (updateError) {
-    //     console.log(updateError);
+    //     console.error(updateError);
     //     return;
     // }
 
     revalidatePath('/opportunities');
 
-    console.log('signed up for ' + id);
+    console.error('signed up for ' + id);
 }
 
 export async function authenticate(
