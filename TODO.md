@@ -12,6 +12,7 @@ Please pretend everything is perfect and this does not exist thank you :-)
 - [ ] Status button click outside button to close
 - [ ] Modal click background to close
 - [ ] Maybe modernize navbar?  The fancy rounded blurred one or a side nav
+- [ ] ADD METADATA
 
 ## Features
 - [ ] Add, remove, publish, unpublish schedule events
